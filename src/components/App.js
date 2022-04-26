@@ -5,8 +5,9 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import "./App.css";
-import Navbar from "./Navbar";
+import "./Nav.css";
+import Nav from "./Nav";
+import SubNav from "./SubNav";
 import Web3 from "web3";
 import Miners from "./pages/Miners";
 import Farms from "./pages/Farms";
@@ -26,7 +27,9 @@ class App extends Component {
     return (
       <div>
       <Router>
-    <Navbar />
+    <Nav />
+    <SubNav/>
+    <div className="main-page">
     <Routes>
         <Route exact path='/' exact element={<Home />} />
         <Route path='/Miners' element={<Miners/>} />
@@ -37,12 +40,13 @@ class App extends Component {
         <Route path='/Nft' element={<Nft/>} />
 
     </Routes>
+    </div>
     </Router>
         <div className="container-fluid mt-5">
           <div className="row">
           </div>
         </div>
-      <Footer />
+      {/* <Footer /> */}
       </div>
 
     );

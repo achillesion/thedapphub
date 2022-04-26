@@ -5,8 +5,8 @@ import './style.css';
 class Nft extends Component {
   render() {
     return (
-        <div>
-
+        <div style={{}}>
+            <h1>This is the NFT Pagesd</h1>
         </div>
     );
   }
