@@ -105,10 +105,11 @@ table {
         }
 
         .premium{
-          width: 200px;
+          width: 300px;
           font-size: 11px;
           position: absolute;
-          top: 20px;
+          height: 45px;
+          /* top: 20px; */
           right: 20px;
         }
 
