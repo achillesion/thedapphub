@@ -20,7 +20,7 @@ class Nav extends Component {
           </li>
         
           <li class="nav-item">
-          <NavLink to="/">
+          <NavLink to="/miners">
             <a href="#" class="nav-link">
 
             <svg

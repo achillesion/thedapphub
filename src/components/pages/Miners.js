@@ -1,324 +1,82 @@
+import axios from "axios";
 import React, { Component } from "react";
 import { Container } from "react-bootstrap";
+import BootstrapTable from "react-bootstrap-table-next";
+import { useState, useEffect } from "react";
 
-class Miners extends Component {
-  render() {
+
+
+  
+  function Miners() {
+    const [data,setData] = useState([]);
+    
+  useEffect(()=>{
+    getData();
+  },[])
+
+  const getData = () => {
+    axios("https://jsonplaceholder.typicode.com/comments").then((res)=>{
+    console.log(res.data);
+    setData(res.data);
+      
+    });
+  };
+
+  const columns=[{
+    dataField:"email",
+    text:"Email",
+
+  },
+  {
+    dataField:"postId",
+    text:"Product ID",
+
+  },
+  {
+    dataField:"Token",
+    text:"Token",
+
+  },
+  {
+    dataField:"Fees",
+    text:"Fees",
+
+  },
+  {
+    dataField:"Age",
+    text:"Age",
+
+  },
+  {
+    dataField:"TVL",
+    text:"TVL",
+
+  },
+  {
+    dataField:"Daily %",
+    text:"Daily %",
+
+  },
+  {
+    dataField:"Contract",
+    text:"Contract",
+
+  },
+  {
+    dataField:"Social",
+    text:"Social",
+
+  }
+
+];
+
+
     return (
-        <>
-        <div>
-            <div className="containerhead">
-                Welcome to the Miner Page! 
-            </div>
-        </div>
-        <div className="main"><table>
-            <div id="head" class="grid-container">
-                <div>Mining Group</div>
-                <div>Token</div>
-                <div>Fees</div>
-                <div>Age</div>
-                <div>TVL</div>
-                <div>Daily %</div>
-                <div>Contract</div>
-                <div>Social</div>
-            </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        <table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container2">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table><table>
-                <div id="list" class="grid-container">
-                    <div>The Space Field</div>
-                    <div>SPO</div>
-                    <div>5% / 5%</div>
-                    <div>22d</div>
-                    <div>$76915</div>
-                    <div>3%</div>
-                    <div>LINK</div>
-                    <div>LINK</div>
-                </div>
-        </table>
-        </div></>
+        <div style={{width:"100%", overflowX: "scroll" }}>
+          <h2>sdsdsdd</h2>
+        <BootstrapTable keyField="id" data={data} columns={columns} />
+       </div>
     );
   }
-}
 
 export default Miners;

@@ -17,12 +17,14 @@
 }
 
 
-body {
+html,body {
   color: black;
   background-color: white;
   margin: 0;
   padding: 0;
     font-family: 'Source Code Pro', serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 table {
     width: 100%;
