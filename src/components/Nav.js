@@ -14,7 +14,7 @@ class Nav extends Component {
         <ul class="navbar-nav">
           <li class="logo">
           <div class="container-box" ></div>
-          <p style={{paddingLeft:"", fontSize: "16px",marginTop:"-10px", fontWeight:"1000", color:"white", textTransform:"lowercase"}}>The<span style={{color:"#ffd700", fontWeight:"500",marginLeft:"8px"}}> <br></br> D<span style={{textTransform:"uppercase"}}>App</span> <br></br></span>Hub</p>
+          <p style={{paddingLeft:"", fontSize: "16px",marginTop:"-10px", fontWeight:"1000", color:"white", textTransform:"lowercase"}}>The<span style={{color:"#ffd700", fontWeight:"500",marginLeft:"8px"}}> <br></br> D<span style={{zIndex:"999", textTransform:"uppercase" }}>A</span><span style={{textTransform:"uppercase",color:"var(--mainYellow)"}}>pp</span> <br></br></span>Hub</p>
 
         
           </li>

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Container } from "react-bootstrap";
 import BootstrapTable from "react-bootstrap-table-next";
 import { useState, useEffect } from "react";
+import paginationFactory from "react-bootstrap-table2-paginator";
 
 
 
@@ -25,6 +26,7 @@ import { useState, useEffect } from "react";
   const columns=[{
     dataField:"email",
     text:"Email",
+    sort: true,
 
   },
   {
@@ -73,8 +75,10 @@ import { useState, useEffect } from "react";
 
     return (
         <div style={{width:"100%", overflowX: "scroll" }}>
-          <h2>sdsdsdd</h2>
-        <BootstrapTable keyField="id" data={data} columns={columns} />
+          <h2>Miners</h2>
+        <BootstrapTable keyField="id" data={data} columns={columns} pagination={paginationFactory()} />
+        <h2>Miners</h2>
+        <BootstrapTable keyField="id" data={data} columns={columns} pagination={paginationFactory()} />
        </div>
     );
   }
